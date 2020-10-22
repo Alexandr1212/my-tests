@@ -1,19 +1,18 @@
 # Тестовое задание 03.2020
 
-## О проекте
+## Backend
 
-1. backend написан на Node.js
-2. frontend написан на JavaScript
+1. Node.js
 
-## Используемые технологии
+## Frontend
 
-1. HTML, CSS
-2. JavaScript, Node.js
+1. JavaScript
+2. HTML, CSS
 
 ## Запуск проекта
 
-1. запускаем сервер: node server.js
-2. открываем http://localhost:3000
+1. Запустить сервер командой: node server.js
+2. Открыть http://localhost:3000
 
 ## Задание
 
