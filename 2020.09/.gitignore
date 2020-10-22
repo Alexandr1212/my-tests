@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+gulp
+gulp.bat
+npm-debug.log
+local-settings.json
+settings.json
+yarn-error.log
+yarn.lock

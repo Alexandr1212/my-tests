@@ -1,0 +1,41 @@
+.quantity-input {
+  width: 80px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 10px 0 5px;
+
+  &__minus,
+  &__plus {
+    margin: auto 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+    border: 0;
+    color: grey;
+    transition: all .3s;
+    outline: none;
+
+    &:hover {
+      color: #000;
+    }
+
+    &[disabled]:not([disabled="false"]) {
+      pointer-events: none;
+      
+      &:hover {
+        color: #c5c5c5;
+      }
+    }
+  }
+
+  &__quantity {
+    margin: auto 0;
+    width: 40px;
+    border: 1px solid #333;
+    text-align: center;
+  }
+}

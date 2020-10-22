@@ -1,0 +1,35 @@
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial;
+}
+
+.main {
+  min-height: 100%;
+  padding: 30px 0;
+  background: #efefef;
+}
+
+.card-item {
+  &-price {
+    display: inline-block;
+  }
+
+  &.red {
+    .card-item-price {
+      color: #fff;
+      background: rgb(224, 86, 86);
+    }
+  }
+
+  &.green {
+    .card-item-price {
+      color: #fff;
+      background: rgb(87, 144, 87);
+    }
+  }
+}

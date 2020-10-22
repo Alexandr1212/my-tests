@@ -1,0 +1,23 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>Корзина ({{ cart.items?.length }})</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <h5 class="card-title">
+        Общая стоимость:
+        <span>{{ cart.totalPrice }}</span> руб
+      </h5>
+      <div class="my-2">
+        <button class="btn btn-sm btn-danger" (click)="clearCart()">Очистить корзину</button>
+      </div>
+      <div class="cart-items">
+        <app-cart-item
+          class="mt-4 d-block"
+          *ngFor="let product of cart.items"
+          [cartItem]="product">
+        </app-cart-item>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

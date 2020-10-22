@@ -1,0 +1,119 @@
+.custom-select {
+  position: relative;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  &__button {
+    padding: 10px 0 10px 10px;
+    background: #dfdfe1;
+    color: #333;
+    border: 2px solid #fff;
+    font-size: 18px;
+    border-radius: $mainBorderRadius;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--active {
+      background: #3d3f4f;
+      border-color: #3d3f4f;
+      color: #fff;
+
+      & .chevron-down {
+        filter: none !important;
+      }
+    }
+
+    .chevron-down {
+      width: 16px;
+      height: 9px;
+      position: absolute;
+      margin: auto;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      display: block;
+      background-image: url("../img/arrow.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+      filter: invert(.8);
+    }
+  }
+
+  &__list {
+    background: rgba(61, 63, 79, .8);
+    position: absolute;
+    display: block;
+    top: 43px;
+    left: 0;
+    right: 0;
+    max-height: 180px;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #3d3f4f;
+    border-top: 0px solid transparent;
+    list-style-type: none;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top left;
+    transform: scale(1, 0);
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+    // ie
+    scrollbar-face-color: #3d9bdb;
+    scrollbar-highlight-color: #3d3f4f;
+    scrollbar-shadow-color: #3d9bdb;
+    scrollbar-track-color: #3d3f4f;
+    scrollbar-arrow-color: transparent;
+
+    // Firefox
+    scrollbar-color: #3d9bdb #3d3f4f;
+    scrollbar-width: thin;
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1, 1);
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #3d3f4f;
+      border-radius: $mainBorderRadius;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #3d9bdb; 
+      border-radius: 10px;
+    }
+  }
+
+  &__list-item {
+    display: block;
+    list-style-type: none;
+    padding: 6px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    text-align: left;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      color: $brandColor;
+    }
+  }
+}

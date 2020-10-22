@@ -1,0 +1,30 @@
+<div class="card-item">
+  <h6 class="mb-2 font-weight-bold">{{ cartItem.product.name }}</h6>
+  <div class="row">
+    <div class="col-12 col-md-2 text-muted">
+      Сумма:
+    </div>
+    <div class="col">
+      {{ cartItem.priceSum }}
+      <span>руб</span>
+    </div>
+  </div>
+  <div class="card-item__quantity">
+    <div class="quantity-input">
+      <button class="quantity-input__minus" (click)="minusQuantity()">−</button>
+      <div class="quantity-input__quantity">{{ cartItem.itemsQuantity }}</div>
+      <button
+        class="quantity-input__plus"
+        (click)="plusQuantity()"
+        [disabled]="cartItem.product.quantity === cartItem.itemsQuantity"
+      >
+        +
+      </button>
+    </div>
+  </div>
+  <div class="mt-2">
+    <button class="btn btn-sm btn-danger" (click)="removeFromCart()">
+      Удалить
+    </button>
+  </div>
+</div>

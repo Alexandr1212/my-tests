@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $mobile) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  align-self: center;
+}

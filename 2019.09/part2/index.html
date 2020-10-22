@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Вторая часть</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Вторая часть</h1>
+        <div class="phonebook">
+          <div class="phonebook_title">Записная книга</div>
+          <div class="phonebook_start-data">
+            <button id="start-data" class="btn">
+              Добавить начальные данные
+            </button>
+          </div>
+          <div class="wrap">
+            <table id="table" class="table">
+              <tr class="table_tr">
+                <th class="table_th">Имя</th>
+                <th class="table_th">Телефон</th>
+                <th class="table_th">Действия</th>
+              </tr>
+            </table>
+          </div>
+          <div class="phonebook_footer">
+            <input type="text" id="new-name" class="input" placeholder="Имя" />
+            <input
+              type="text"
+              id="new-phone"
+              class="input phone-control"
+              placeholder="Телефон"
+            />
+            <button id="add-item" class="btn">Добавить</button>
+            <div id="success"></div>
+            <div id="error"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/template" id="item-template">
+      <tr class="table_tr">
+            <td class="table_td">
+                <input id="edit-name" class="input" type="text" disabled value="<%- name %>">
+            </td>
+            <td class="table_td">
+                <input id="edit-phone" class="input phone-control" type="text" disabled value="<%- phone %>">
+            </td>
+            <td class="table_td">
+                <button class="edit-item btn btn--icon" title="Редактировать">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button class="save-item btn btn--icon" title="Сохранить изменения">
+                    <i class="fas fa-check"></i>
+                </button>
+                <button class="remove-item btn btn--icon" title="Удалить">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
+        </tr>
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/libs/underscore.min.js"></script>
+    <script src="js/libs/backbone.min.js"></script>
+    <script src="js/libs/backbone.localstorage.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/App.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+.navigation-btn {
+  float: right;
+  background: transparent;
+  outline: none;
+  border: 0;
+  z-index: 100;
+  width: 30px;
+  height: 25px;
+  font-weight: bold;
+  transform: rotate(0deg);
+  transition: $longTransition;
+  cursor: pointer;
+
+  @media (min-width: $laptop) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+      transform-origin: left center;
+    }
+
+    &:nth-child(2) {
+      top: 12px;
+      transform-origin: left center;
+    }
+
+    &:nth-child(3) {
+      top: 23px;
+      transform-origin: left center;
+    }
+  }
+
+  &--open {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: 1px;
+      }
+
+      &:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.btn {
+  text-align: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $smallFontSize;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-transform: uppercase;
+  border-radius: $mainBorderRadius;
+  transition: $shortTransition;
+
+  @media (min-width: $tablet) {
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  &--blue {
+    border: 1px solid #fff;
+    color: #fff;
+    background: $brandColor;
+  }
+
+  &--white {
+    border: 1px solid #000;
+    color: #000;
+    background: #fff;
+
+    &:hover {
+      border: 1px solid #fff;
+      color: #fff;
+      background: $brandColor;
+    }
+  }
+}

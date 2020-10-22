@@ -1,0 +1,336 @@
+.common-business-banner {
+  padding-top: 45px;
+  padding-bottom: 90px;
+  background-image: url("../img/common-business-banner.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  @media (min-width: $tablet) {
+    padding-top: 140px;
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 230px;
+    padding-bottom: 190px;
+  }
+
+  &--mobile {
+    padding: 30px 0;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 26px;
+    font-size: 18px;
+    width: 220px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet) {
+      font-size: 35px;
+      width: 440px;
+      line-height: 45px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 48px;
+      width: 735px;
+      line-height: 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet) {
+      font-size: 17px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    @include ul-reset;
+    font-size: 14px;
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 50px;
+      font-size: 17px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 20px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btns {
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+
+    .btn:first-child {
+      @media (min-width: $tablet) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  & &__description,
+  & &__list,
+  & &__btns {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+.common-business-ordering {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #272733;
+
+  @media (min-width: $tablet) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 115px;
+    padding-bottom: 110px;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    color: #bbbbbb;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      font-size: 18px;
+      margin-bottom: 75px;
+    }
+  }
+
+  &__circles {
+    margin-bottom: 45px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__dots {
+    transform: rotate(90deg);
+    height: 170px;
+    position: relative;
+
+    @media (min-width: $desktop) {
+      transform: rotate(0deg);
+      margin-top: 30px;
+      height: auto;
+      width: 25px;
+    }
+
+    img {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @media (min-width: $desktop) {
+        transform: scale(3.4);
+        position: static;
+        margin: 0;
+      }
+    }
+
+  }
+
+  &-circle {
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      position: relative;
+    }
+
+    &__icon {
+      margin: 0 auto 20px;
+      width: 90px;
+      height: 90px;
+      text-align: center;
+      line-height: 95px;
+      border-radius: 50%;
+      background: $brandColor;
+      border: 6px solid #27689a;
+    }
+
+    &__text {
+      color: #fff;
+      width: 190px;
+      margin: auto;
+    }
+  }
+
+  &-form {
+    &__row {
+      @media (min-width: $laptop) {
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &--margin-bottom {
+        @media (min-width: $laptop) {
+          margin-bottom: 55px;
+        }
+      }
+    }
+
+    &__select {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (min-width: $laptop) {
+        width: 31%;
+        margin-bottom: 0;
+      }
+
+      select {
+        width: 100%;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (min-width: $laptop) {
+        width: 31%;
+        margin-bottom: 0;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    &__range {
+      width: 100%;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 40px;
+
+      @media (min-width: $laptop) {
+        width: 65.5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+
+      .custom-range {
+        flex: 0 0 100%;
+        margin-top: 15px;
+      }
+
+      &-label {
+        margin-bottom: 5px;
+
+        @media (min-width: $laptop) {
+          margin-bottom: 0;
+        }
+      }
+
+      &-value {
+        margin-bottom: 5px;
+
+        @media (min-width: $laptop) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__file {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (min-width: $laptop) {
+        width: 31%;
+        margin: auto 0;
+      }
+    }
+
+    &__btn {
+      .btn {
+        display: block;
+        width: 100%;
+        margin: auto;
+
+        @media (min-width: $laptop) {
+          width: 31%;
+        }
+      }
+    }
+  }
+}

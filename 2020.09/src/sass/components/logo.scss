@@ -1,0 +1,10 @@
+.logo {
+  color: #fff;
+  font-size: 23px;
+  font-family: $logoFont;
+  text-transform: uppercase;
+
+  @media (min-width: $laptop) {
+    font-size: 28px;
+  }
+}

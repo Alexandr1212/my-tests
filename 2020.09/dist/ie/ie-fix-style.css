@@ -1,0 +1,9 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* IE10 IE11 */
+
+  .common-business-ordering-form__range .custom-range {
+    margin-top: 0 !important;
+    position: relative !important;
+    top: -15px !important;
+  }
+}

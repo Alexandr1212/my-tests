@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Test</title>
+  </head>
+
+  <body class="main-body">
+    <div class="mobile-app">
+      <div class="mobile-app_text">
+        For use on desktop version only.
+        For mobile devices, install the mobile application
+      </div>
+      <a href="#" class="mobile-app_link">
+        <img src="src/img/app-store.png" alt="App Store">
+      </a>
+      <a href="#" class="mobile-app_link">
+        <img src="src/img/google-play.png" alt="Google Play">
+      </a>
+    </div>
+    <div class="main-body_wrap">
+      <nav class="nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <div class="nav_link active" data-url="">
+              <img src="src/img/chart-icon.png" class="nav_img" alt="Metrics" />
+              Metrics
+            </div>
+          </li>
+          <li class="nav_item">
+            <div class="nav_link" data-url="home">
+              <img src="src/img/home-icon.png" class="nav_img" alt="Home" />
+              Home
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <main class="main">
+        <div class="main_container">
+          <div data-router-render></div>
+        </div>
+        <div class="message">
+          <div class="message_close">x</div>
+          <div class="message_text"></div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+
+</html>

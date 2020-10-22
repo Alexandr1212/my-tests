@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: "Arial";
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px 20px;
+}
+
+.phonebook {
+  border: 1px solid #90cedd;
+  border-radius: 2px;
+  width: 700px;
+}
+
+.phonebook_title {
+  font-size: 25px;
+  color: #2b729a;
+  font-weight: bold;
+  background: #daeef8;
+  padding: 25px 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.phonebook_start-data {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.phonebook_footer {
+  padding: 10px 20px;
+  border-top: 1px solid #90cedd;
+}
+
+.wrap {
+  padding: 0 20px;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #333;
+  border-collapse: collapse;
+}
+
+.table_th {
+  border-bottom: 2px solid #dee2e6;
+  padding: 0.55rem;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.table_td {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+tr:last-child .table_td {
+  border-bottom: 0;
+}
+
+tr:nth-child(odd) .table_td {
+  background: #f5f5f5;
+}
+
+.input {
+  padding: 0.275rem 0.55rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background: transparent;
+  border-radius: 0.25rem;
+  border: 0;
+  border: 1px solid #ced4da;
+  transition: all 0.4s;
+}
+
+.input:focus {
+  border-color: #2b729a;
+  background: #fff;
+  outline: none;
+}
+
+.input:disabled {
+  border: 0;
+}
+
+#error {
+  padding: 10px 15px;
+  color: #fff;
+  background: #c95151cf;
+  margin-top: 15px;
+  display: none;
+  border-radius: 2px;
+  font-size: 17px;
+  position: relative;
+}
+
+#error.visible {
+  display: block;
+}
+
+#success {
+  padding: 10px 15px;
+  color: #fff;
+  background: #51c99ecf;
+  margin-top: 15px;
+  display: none;
+  border-radius: 2px;
+  font-size: 17px;
+  position: relative;
+}
+
+#success.visible {
+  display: block;
+}
+
+.close {
+  color: #fff;
+  font-size: 17px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.close:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  border: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.4s;
+  color: grey;
+  padding: 6px 12px;
+  display: inline-block;
+}
+
+.btn--icon {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 35px;
+  padding: 0;
+}
+
+.btn:hover {
+  background: #daeef8;
+}
+
+.edit-item.hidden {
+  display: none;
+}
+
+.save-item {
+  display: none;
+}
+
+.save-item.visible {
+  display: inline-block;
+}

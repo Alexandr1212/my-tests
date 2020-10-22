@@ -1,0 +1,38 @@
+.custom-file {
+  &__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__label {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    background: #fff;
+    border: 2px solid $brandColor;
+    font-size: 18px;
+    border-radius: $mainBorderRadius;
+    padding: 10px 0;
+    transition: $shortTransition;
+  }
+
+  &__input + &__label {
+    cursor: pointer;
+  }
+
+  &__input:focus + &__label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+
+  &__label:hover,
+  &__input:focus + &__label,
+  &__input + &__lable:hover {
+    background: $brandColor;
+    color: #fff;
+}
+}

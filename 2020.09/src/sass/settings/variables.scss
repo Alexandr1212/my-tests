@@ -1,0 +1,23 @@
+// Initialization of all variables
+
+// 1. Fonts
+$logoFont: 'Raleway', sans-serif;
+$mainFont: 'Lato', sans-serif;
+
+$smallFontSize: 13px;
+
+// 2. Devices
+$mobile: 576px;
+$tablet: 768px;    // $media (min-width: $tablet) {}
+$laptop: 992px;    // $media (min-width: $laptop) {}
+$desktop: 1200px;  // $media (min-width: $desktop) {}
+
+// 3. Decors
+$brandColor: #43abf0;
+$mainColor: #3d3f4f;
+
+$mainBorderRadius: 2px;
+
+// 4. Animations
+$shortTransition: all 0.3s;
+$longTransition: all 0.5s;

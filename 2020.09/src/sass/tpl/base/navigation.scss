@@ -1,0 +1,62 @@
+.base-navigation {
+  height: 0;
+  overflow-y: hidden;
+  background: #262633;
+  transition: $longTransition;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75.7px;
+
+  @media (min-width: $laptop) {
+    height: auto;
+    position: static;
+    background: transparent;
+  }
+
+  &--slideDown {
+    height: 164px;
+  }
+
+  &__list {
+    @include ul-reset;
+
+    @media (min-width: $laptop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $laptop) {
+      font-size: $smallFontSize;
+      margin-right: 58px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 0;
+    color: #fff;
+    transition: $shortTransition;
+
+    @media (min-width: $laptop) {
+      display: inline;
+      padding: 0;
+    }
+
+    &:hover,
+    &--active {
+      color: $brandColor;
+    }
+  }
+}
